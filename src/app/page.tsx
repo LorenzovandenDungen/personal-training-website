@@ -1,68 +1,85 @@
-// src/app/page.tsx
-import React from 'react';
+// src/pages/index.tsx
+import Head from 'next/head';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDumbbell, faWeightHanging, faRunning } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-const HomePage = () => {
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="bg-gray-100 text-gray-900">
+      <Head>
+        <title>Boxchampy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <header className="bg-black text-white p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="logo">
-            <img src="https://via.placeholder.com/150x50?text=Logo" alt="BoxChampy Logo" className="h-10" />
+        <div className="container mx-auto flex items-center justify-between">
+          <div className="flex items-center">
+            <div className="text-3xl font-bold text-red-600">BOXCHAMPY</div>
           </div>
           <nav className="flex space-x-4">
-            <a href="#home" className="hover:underline">Home</a>
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#locations" className="hover:underline">Locations</a>
-            <a href="#contact" className="hover:underline">Contact</a>
-            <a href="#signup" className="bg-red-500 px-4 py-2 rounded text-white hover:bg-red-600">Sign Up</a>
+            <a href="#" className="hover:text-red-600">Home</a>
+            <a href="#" className="hover:text-red-600">About</a>
+            <a href="#" className="hover:text-red-600">Lesson</a>
+            <a href="#" className="hover:text-red-600">Contact</a>
+            <a href="#" className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Sign Up</a>
           </nav>
         </div>
       </header>
-
-      <section className="bg-cover bg-center text-white py-20" style={{ backgroundImage: "url('https://via.placeholder.com/1200x400?text=Hero+Background')" }}>
+      <section className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('https://placehold.co/1920x1080')" }}>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="container mx-auto h-full flex items-center">
+          <div className="text-white">
+            <h1 className="text-5xl font-bold">FIGHT LIKE A <span className="text-red-600">CHAMPION</span></h1>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white shadow-lg p-8 mt-8 -mb-16 z-10 relative container mx-auto">
+        <div className="flex justify-around">
+          <div className="text-center">
+            <FontAwesomeIcon icon={faDumbbell} className="text-4xl mb-2" />
+            <div className="text-red-600 font-bold">CROSS FIT</div>
+          </div>
+          <div className="text-center">
+            <FontAwesomeIcon icon={faWeightHanging} className="text-4xl mb-2" />
+            <div className="text-red-600 font-bold">WEIGHTS</div>
+          </div>
+          <div className="text-center">
+            <FontAwesomeIcon icon={faRunning} className="text-4xl mb-2" />
+            <div className="text-red-600 font-bold">EXERCISES</div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white py-16">
+        <div className="container mx-auto flex">
+          <div className="w-1/2 pr-8">
+            <Image src="https://placehold.co/600x400" alt="Boxing training" width={600} height={400} className="rounded-lg shadow-lg" />
+          </div>
+          <div className="w-1/2 pl-8">
+            <h2 className="text-3xl font-bold mb-4">HOW WE GOT STARTED IN THIS BUSINESS</h2>
+            <p className="mb-4">Lorem ipsum dolor sit amet. Sed sunt voluptatem non veniam sint ut dolor sint aut eveniet beatae id vitae nemo et modi cupiditate qui corporis voluptate. Ut amet neque ad ipsum consequatur est recusandae itaque et rerum minima aut officiis esse quo aperiam eligendi.</p>
+            <p className="mb-4">Ut obcaecati accusamus quo autem molestiae est atque dignissimos qui rerum voluptates eum molestiae nulla rem placeat impedit et magnam magnam.</p>
+            <a href="#" className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Sign Up</a>
+          </div>
+        </div>
+      </section>
+      <section className="bg-black text-white py-16">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold">Fight Like a Champion</h1>
-          <div className="mt-8 space-x-4">
-            <button className="bg-red-500 px-4 py-2 rounded hover:bg-red-600">Cross Fit</button>
-            <button className="bg-red-500 px-4 py-2 rounded hover:bg-red-600">Weights</button>
-            <button className="bg-red-500 px-4 py-2 rounded hover:bg-red-600">Exercises</button>
+          <h2 className="text-3xl font-bold mb-4">READY FOR YOUR <span className="text-red-600">NEXT LESSON?</span></h2>
+          <a href="mailto:inbox@boxchampy" className="block mb-4">inbox@boxchampy</a>
+          <div className="flex justify-center space-x-4">
+            <a href="#"><FontAwesomeIcon icon={faLinkedin} className="text-2xl" /></a>
+            <a href="#"><FontAwesomeIcon icon={faFacebook} className="text-2xl" /></a>
+            <a href="#"><FontAwesomeIcon icon={faInstagram} className="text-2xl" /></a>
           </div>
         </div>
       </section>
-
-      <section className="py-20 bg-gray-100">
-        <div className="container mx-auto flex flex-col md:flex-row items-center">
-          <img src="https://via.placeholder.com/600x400?text=About+Us" alt="About Us" className="md:w-1/2 rounded-lg shadow-lg" />
-          <div className="md:w-1/2 md:ml-8 mt-8 md:mt-0">
-            <h2 className="text-3xl font-bold">How We Got Started In This Business</h2>
-            <p className="mt-4 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <button className="mt-6 bg-red-500 px-4 py-2 rounded text-white hover:bg-red-600">Sign Up</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-black text-white text-center">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold">Ready for your next lesson?</h2>
-          <p className="mt-4">Contact us at <a href="mailto:inbox@boxchampy.com" className="text-red-500 hover:underline">inbox@boxchampy.com</a></p>
-        </div>
-      </section>
-
-      <footer className="bg-gray-800 text-white py-6">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="flex space-x-4">
-            <a href="#"><img src="https://via.placeholder.com/24x24?text=LI" alt="LinkedIn" className="h-6" /></a>
-            <a href="#"><img src="https://via.placeholder.com/24x24?text=FB" alt="Facebook" className="h-6" /></a>
-            <a href="#"><img src="https://via.placeholder.com/24x24?text=IG" alt="Instagram" className="h-6" /></a>
-          </div>
-          <div className="mt-4 md:mt-0 flex space-x-4">
-            <a href="#" className="hover:underline">Privacy Policy</a>
-            <a href="#" className="hover:underline">Terms & Conditions</a>
-          </div>
+      <footer className="bg-gray-800 text-gray-400 py-4">
+        <div className="container mx-auto flex justify-between">
+          <div>Privacy Policy</div>
+          <div>Terms & Conditions</div>
         </div>
       </footer>
     </div>
   );
-};
-
-export default HomePage;
+}
