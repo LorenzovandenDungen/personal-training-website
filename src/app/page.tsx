@@ -1,47 +1,68 @@
-import Image from "next/image";
+// src/app/page.tsx
+import React from 'react';
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <main className="flex flex-col items-center">
-      <header className="w-full bg-black text-white py-4 flex justify-between items-center px-4 md:px-8">
-        <div className="text-xl md:text-2xl font-bold">BOXCHAMPY</div>
-        <nav>
-          <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
-            <li><a href="#home" className="hover:text-red-500">Home</a></li>
-            <li><a href="#about" className="hover:text-red-500">About</a></li>
-            <li><a href="#locations" className="hover:text-red-500">Locations</a></li>
-            <li><a href="#contact" className="hover:text-red-500">Contact</a></li>
-            <li><a href="#signup" className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Sign Up</a></li>
-          </ul>
-        </nav>
+    <div className="min-h-screen bg-gray-100">
+      <header className="bg-black text-white p-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="logo">
+            <img src="/logo.png" alt="BoxChampy Logo" className="h-10" />
+          </div>
+          <nav className="flex space-x-4">
+            <a href="#home" className="hover:underline">Home</a>
+            <a href="#about" className="hover:underline">About</a>
+            <a href="#locations" className="hover:underline">Locations</a>
+            <a href="#contact" className="hover:underline">Contact</a>
+            <a href="#signup" className="bg-red-500 px-4 py-2 rounded text-white hover:bg-red-600">Sign Up</a>
+          </nav>
+        </div>
       </header>
-      <section className="relative w-full bg-cover bg-center h-96 md:h-screen" style={{ backgroundImage: 'url(/path-to-your-image.jpg)' }}>
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-bold">FIGHT LIKE A CHAMPION</h1>
-          <div className="mt-4 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
-            <a href="#crossfit" className="bg-white text-black px-4 py-2 rounded">Cross Fit</a>
-            <a href="#weights" className="bg-white text-black px-4 py-2 rounded">Weights</a>
-            <a href="#exercises" className="bg-white text-black px-4 py-2 rounded">Exercises</a>
+
+      <section className="bg-cover bg-center text-white py-20" style={{ backgroundImage: "url('/hero-background.jpg')" }}>
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold">Fight Like a Champion</h1>
+          <div className="mt-8 space-x-4">
+            <button className="bg-red-500 px-4 py-2 rounded hover:bg-red-600">Cross Fit</button>
+            <button className="bg-red-500 px-4 py-2 rounded hover:bg-red-600">Weights</button>
+            <button className="bg-red-500 px-4 py-2 rounded hover:bg-red-600">Exercises</button>
           </div>
         </div>
       </section>
-      <section id="about" className="w-full py-16 bg-gray-100 text-black text-center px-4">
-        <h2 className="text-2xl md:text-3xl font-bold">HOW WE GOT STARTED IN THIS BUSINESS</h2>
-        <p className="max-w-xl mx-auto mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque, nisl vitae vehicula cursus, nisl velit efficitur felis, vel placerat velit lectus in felis.</p>
-        <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded">Sign Up</button>
-      </section>
-      <footer className="w-full py-8 bg-black text-white text-center">
-        <div className="flex justify-center space-x-4">
-          <a href="https://www.facebook.com" className="hover:text-red-500">Facebook</a>
-          <a href="https://www.instagram.com" className="hover:text-red-500">Instagram</a>
-          <a href="https://www.twitter.com" className="hover:text-red-500">Twitter</a>
+
+      <section className="py-20 bg-gray-100">
+        <div className="container mx-auto flex flex-col md:flex-row items-center">
+          <img src="/about-image.jpg" alt="About Us" className="md:w-1/2 rounded-lg shadow-lg" />
+          <div className="md:w-1/2 md:ml-8 mt-8 md:mt-0">
+            <h2 className="text-3xl font-bold">How We Got Started In This Business</h2>
+            <p className="mt-4 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button className="mt-6 bg-red-500 px-4 py-2 rounded text-white hover:bg-red-600">Sign Up</button>
+          </div>
         </div>
-        <div className="mt-4">
-          <p>&copy; 2024 BOXCHAMPY</p>
-          <p><a href="#privacy" className="hover:text-red-500">Privacy Policy</a> | <a href="#terms" className="hover:text-red-500">Terms & Conditions</a></p>
+      </section>
+
+      <section className="py-20 bg-black text-white text-center">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold">Ready for your next lesson?</h2>
+          <p className="mt-4">Contact us at <a href="mailto:inbox@boxchampy.com" className="text-red-500 hover:underline">inbox@boxchampy.com</a></p>
+        </div>
+      </section>
+
+      <footer className="bg-gray-800 text-white py-6">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div className="flex space-x-4">
+            <a href="#"><img src="/linkedin-icon.png" alt="LinkedIn" className="h-6" /></a>
+            <a href="#"><img src="/facebook-icon.png" alt="Facebook" className="h-6" /></a>
+            <a href="#"><img src="/instagram-icon.png" alt="Instagram" className="h-6" /></a>
+          </div>
+          <div className="mt-4 md:mt-0 flex space-x-4">
+            <a href="#" className="hover:underline">Privacy Policy</a>
+            <a href="#" className="hover:underline">Terms & Conditions</a>
+          </div>
         </div>
       </footer>
-    </main>
+    </div>
   );
-}
+};
+
+export default HomePage;
