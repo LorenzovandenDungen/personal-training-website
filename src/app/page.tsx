@@ -7,7 +7,7 @@ const HomePage = () => {
       <header className="bg-black text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
           <div className="logo">
-            <img src="/logo.png" alt="BoxChampy Logo" className="h-10" />
+            <img src="https://via.placeholder.com/150x50?text=Logo" alt="BoxChampy Logo" className="h-10" />
           </div>
           <nav className="flex space-x-4">
             <a href="#home" className="hover:underline">Home</a>
@@ -19,7 +19,7 @@ const HomePage = () => {
         </div>
       </header>
 
-      <section className="bg-cover bg-center text-white py-20" style={{ backgroundImage: "url('/hero-background.jpg')" }}>
+      <section className="bg-cover bg-center text-white py-20" style={{ backgroundImage: "url('https://via.placeholder.com/1200x400?text=Hero+Background')" }}>
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold">Fight Like a Champion</h1>
           <div className="mt-8 space-x-4">
@@ -32,7 +32,7 @@ const HomePage = () => {
 
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
-          <img src="/about-image.jpg" alt="About Us" className="md:w-1/2 rounded-lg shadow-lg" />
+          <img src="https://via.placeholder.com/600x400?text=About+Us" alt="About Us" className="md:w-1/2 rounded-lg shadow-lg" />
           <div className="md:w-1/2 md:ml-8 mt-8 md:mt-0">
             <h2 className="text-3xl font-bold">How We Got Started In This Business</h2>
             <p className="mt-4 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -51,9 +51,9 @@ const HomePage = () => {
       <footer className="bg-gray-800 text-white py-6">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4">
-            <a href="#"><img src="/linkedin-icon.png" alt="LinkedIn" className="h-6" /></a>
-            <a href="#"><img src="/facebook-icon.png" alt="Facebook" className="h-6" /></a>
-            <a href="#"><img src="/instagram-icon.png" alt="Instagram" className="h-6" /></a>
+            <a href="#"><img src="https://via.placeholder.com/24x24?text=LI" alt="LinkedIn" className="h-6" /></a>
+            <a href="#"><img src="https://via.placeholder.com/24x24?text=FB" alt="Facebook" className="h-6" /></a>
+            <a href="#"><img src="https://via.placeholder.com/24x24?text=IG" alt="Instagram" className="h-6" /></a>
           </div>
           <div className="mt-4 md:mt-0 flex space-x-4">
             <a href="#" className="hover:underline">Privacy Policy</a>
